@@ -19,7 +19,13 @@ jobs:
         python-version: '3.11'
     - name: Run tests
       id: tests
-      uses: education/autograding@v1
+      uses: classroom-resources/autograding-command-grader@v1
+      with:
+        test-name: "Prim MST Tests"
+        setup-command: "pip install pytest"
+        command: "python -m pytest tests/test_hw04.py -v"
+        timeout: 10
+        max-score: 100
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
