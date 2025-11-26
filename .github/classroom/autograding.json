@@ -3,7 +3,7 @@
     {
       "name": "Prim MST Tests",
       "setup": "pip install pytest",
-      "run": "pytest tests/test_hw04.py -v",
+      "run": "PYTHONPATH=. pytest tests/test_hw04.py -v",
       "input": "",
       "output": "",
       "comparison": "included",
