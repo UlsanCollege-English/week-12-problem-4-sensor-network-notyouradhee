@@ -17,12 +17,9 @@ jobs:
       uses: actions/setup-python@v5
       with:
         python-version: '3.11'
-    - name: tests
+    - name: Run tests
       id: tests
-      uses: classroom-resources/autograding-python-grader@v1
-      with:
-        timeout: 10
-        setup-command: 'pip install pytest'
+      uses: education/autograding@v1
     - name: Autograding Reporter
       uses: classroom-resources/autograding-grading-reporter@v1
       env:
